@@ -9,7 +9,6 @@
 
     :root {
       --neon: #00ffcc;
-      --purple: #c026d3;
       --bg: #0a0a0f;
     }
 
@@ -19,13 +18,12 @@
       background: var(--bg);
       color: #e0e0e0;
       font-family: 'Roboto Mono', sans-serif;
-      line-height: 1.5;
     }
 
     header {
       background: #111118;
       border-bottom: 3px solid var(--neon);
-      padding: 12px 0;
+      padding: 15px 0;
       position: fixed;
       width: 100%;
       z-index: 100;
@@ -44,232 +42,338 @@
       font-family: 'Press Start 2P', sans-serif;
       font-size: 22px;
       color: var(--neon);
-      text-shadow: 0 0 20px var(--neon);
     }
 
     .nav-links a {
       color: #ddd;
+      margin-left: 25px;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 16px;
+      font-weight: bold;
     }
 
     .hero {
-      min-height: 90vh;
-      background: linear-gradient(rgba(10,10,15,0.9), rgba(10,10,15,0.95));
+      min-height: 100vh;
+      background: linear-gradient(rgba(10,10,15,0.85), rgba(10,10,15,0.95));
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100px 20px 80px;
-      margin-top: 60px;
-    }
-
-    .hero-content h1 {
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-      color: white;
-      text-shadow: 0 0 30px var(--neon);
-    }
-
-    .hero-content p {
-      font-size: 1.3rem;
-      margin-bottom: 40px;
-      color: #bbb;
+      padding-top: 80px;
     }
 
     .btn {
-      padding: 16px 40px;
-      font-size: 1.1rem;
+      padding: 18px 45px;
+      font-size: 1.3rem;
       background: transparent;
-      border: 3px solid var(--neon);
+      border: 4px solid var(--neon);
       color: var(--neon);
       cursor: pointer;
       font-family: 'Press Start 2P', sans-serif;
-      transition: all 0.4s;
+      margin: 8px;
     }
 
     .btn:hover {
       background: var(--neon);
       color: #000;
-      box-shadow: 0 0 40px var(--neon);
     }
 
     .section {
       max-width: 1300px;
       margin: 0 auto;
       padding: 80px 20px;
+      text-align: center;
     }
 
     h2 {
-      text-align: center;
-      font-size: 2rem;
+      font-size: 2.4rem;
       margin-bottom: 50px;
       color: var(--neon);
+      text-shadow: 0 0 20px var(--neon);
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
     .product-card {
       background: #181824;
       border: 2px solid #333;
-      padding: 20px;
-      transition: all 0.4s;
+      padding: 25px;
       position: relative;
     }
-
-    .product-card:hover {
-      border-color: var(--neon);
-      transform: translateY(-10px);
-      box-shadow: 0 0 30px rgba(0, 255, 204, 0.4);
-    }
-
     .tag {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      padding: 5px 12px;
-      font-size: 0.75rem;
+      top: 15px;
+      right: 15px;
+      padding: 6px 14px;
       background: #00ff00;
       color: #000;
       font-weight: bold;
     }
-
-    .price {
-      font-size: 1.8rem;
-      color: var(--neon);
-      margin: 15px 0;
-      font-weight: bold;
-    }
+    .price { font-size: 1.9rem; color: var(--neon); margin: 20px 0; }
 
     .buy-btn {
       width: 100%;
-      padding: 14px;
+      padding: 16px;
       background: #c026d3;
       color: white;
       border: none;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
-      margin-top: 15px;
     }
 
-    #vpn-warning {
+    .modal {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #ff0000;
-      color: white;
-      text-align: center;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background: #181824;
+      padding: 40px;
+      border: 4px solid var(--neon);
+      width: 90%;
+      max-width: 420px;
+    }
+
+    /* 채팅창 */
+    #chat-box {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 380px;
+      background: #181824;
+      border: 3px solid var(--neon);
+      z-index: 1500;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .chat-header {
+      background: var(--neon);
+      color: #000;
       padding: 15px;
-      font-size: 1.1rem;
-      z-index: 1000;
-      box-shadow: 0 0 20px red;
-    }
-
-    footer {
-      background: #0a0a12;
       text-align: center;
-      padding: 50px 20px;
-      border-top: 2px solid #333;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    .warning {
-      color: #ff5555;
-      font-size: 0.9rem;
-      margin-top: 20px;
+    #chat-messages {
+      height: 340px;
+      padding: 15px;
+      overflow-y: auto;
+      background: #0f0f1a;
     }
-
-    @media (max-width: 768px) {
-      .hero-content h1 { font-size: 2.2rem; }
-      .hero-content p { font-size: 1.1rem; }
-      .btn { padding: 14px 30px; font-size: 1rem; }
+    .message {
+      margin: 8px 0;
+      padding: 8px 12px;
+      border-radius: 6px;
+      max-width: 85%;
     }
+    .user-msg { background: #1e3a8a; margin-left: auto; }
+    .admin-msg { background: #b91c1c; margin-right: auto; }
   </style>
 </head>
 <body>
 
-  <div id="vpn-warning">
-    ❌ PLS NO VPN<br>
-    <strong>PLS KOREA VPN AND IP CHECK</strong>
-  </div>
-
-  <header>
-    <div class="nav">
-      <div class="logo">RIVALSCHEATSHOP</div>
-      <div class="nav-links">
-        <a href="#">메뉴</a>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>RivalsCheatShop</h1>
+  <section class="hero" id="home-section">
+    <div>
       <p>최고의 Roblox Executor &amp; Cheats</p>
-      <button class="btn">지금 쇼핑하기</button>
+      <button class="btn" onclick="showLogin()">로그인</button>
+      <button class="btn" onclick="showRegister()" style="background:#c026d3; border-color:#c026d3;">회원가입</button>
     </div>
   </section>
 
-  <section class="section">
-    <h2>🔥 BEST KICIA HOOK CONFIG</h2>
+  <section class="section" id="products-section">
+    <h2>Kicia HOOK CONFIG</h2>
     <div class="products">
-
       <div class="product-card">
         <div class="tag">BEST</div>
         <h3>Kicia Hook Config</h3>
         <p>최신 우회 + 강력한 Hook + Undetected</p>
         <div class="price">₩ 75,000</div>
-        <button class="buy-btn">구매하기</button>
+        <button class="buy-btn" onclick="attemptPurchase(this)">구매하기</button>
       </div>
 
       <div class="product-card">
         <div class="tag">POPULAR</div>
         <h3>Custom Script</h3>
-        <p>이름없는 향상자와 똑같은 스크립트를 만들고 싶으신가요?<br>
-        Do you want the same script as the unnamed enhancer?<br>
-        <strong>구매해주세요</strong></p>
+        <p>이름없는 향상자와 똑같은 스크립트를 만들고 싶으신가요?</p>
         <div class="price">₩ 85,000</div>
-        <button class="buy-btn">구매하기</button>
+        <button class="buy-btn" onclick="attemptPurchase(this)">구매하기</button>
       </div>
-
-      <div class="product-card">
-        <h3>Kicia Hook Private Config</h3>
-        <p>맞춤형 프라이빗 설정 • Private Config</p>
-        <div class="price">₩ 120,000</div>
-        <button class="buy-btn">구매하기</button>
-      </div>
-
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 RivalsCheatShop</p>
-    <p class="warning">
-      ※ 교육 및 테스트 목적으로만 사용하세요.<br>
-      Roblox에서 사용 시 계정 정지될 수 있습니다.
-    </p>
+  <!-- 로그인 모달 -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <h2>로그인</h2>
+      <input type="text" id="login-id" placeholder="아이디" style="width:100%; padding:15px; margin:10px 0;">
+      <input type="password" id="login-pw" placeholder="비밀번호" style="width:100%; padding:15px; margin:10px 0;">
+      <button onclick="login()" style="width:100%; padding:18px; background:var(--neon); color:#000; margin-top:10px;">로그인</button>
+      <button onclick="closeModals()" style="width:100%; padding:15px; margin-top:10px;">취소</button>
+    </div>
+  </div>
+
+  <!-- 회원가입 모달 -->
+  <div id="register-modal" class="modal">
+    <div class="modal-content">
+      <h2>회원가입</h2>
+      <input type="text" id="reg-id" placeholder="아이디" style="width:100%; padding:15px; margin:10px 0;">
+      <input type="password" id="reg-pw" placeholder="비밀번호" style="width:100%; padding:15px; margin:10px 0;">
+      <input type="text" id="reg-name" placeholder="닉네임" style="width:100%; padding:15px; margin:10px 0;">
+      <button onclick="register()" style="width:100%; padding:18px; background:#c026d3; color:white; margin-top:10px;">회원가입</button>
+      <button onclick="closeModals()" style="width:100%; padding:15px; margin-top:10px;">취소</button>
+    </div>
+  </div>
+
+  <!-- 1:1 채팅 -->
+  <div id="chat-box">
+    <div class="chat-header">
+      <span id="chat-title">관리자와 1:1 채팅</span>
+      <span onclick="closeChat()" style="cursor:pointer; font-size:18px;">✕</span>
+    </div>
+    <div id="chat-messages"></div>
+    <input type="text" id="chat-input" placeholder="메시지를 입력하세요..." 
+           style="width:100%; padding:15px;" onkeypress="if(event.key==='Enter') sendMessage()">
+  </div>
+
+  <footer style="text-align:center; padding:40px; color:#666;">
+    © 2026 RivalsCheatShop
   </footer>
 
   <script>
-    async function checkIP() {
-      try {
-        const res = await fetch('https://ipwho.is/');
-        const data = await res.json();
-        
-        if (data.country_code !== 'KR') {
-          document.getElementById('vpn-warning').style.display = 'block';
-        }
-      } catch (e) {
-        console.log("IP 체크 실패");
+    let currentUser = null;
+    let isAdmin = false;
+
+    const ADMIN_ID = "aa789";
+    const ADMIN_PW = "khs10937";
+    const ADMIN_NICK = "관리자";
+
+    function loadUsers() {
+      const users = localStorage.getItem('rivalsUsers');
+      return users ? JSON.parse(users) : [];
+    }
+
+    function saveUsers(users) {
+      localStorage.setItem('rivalsUsers', JSON.stringify(users));
+    }
+
+    function showLogin() {
+      document.getElementById('login-modal').style.display = 'flex';
+    }
+
+    function showRegister() {
+      document.getElementById('register-modal').style.display = 'flex';
+    }
+
+    function closeModals() {
+      document.getElementById('login-modal').style.display = 'none';
+      document.getElementById('register-modal').style.display = 'none';
+    }
+
+    function register() {
+      const id = document.getElementById('reg-id').value.trim();
+      const pw = document.getElementById('reg-pw').value.trim();
+      const name = document.getElementById('reg-name').value.trim();
+
+      if (!id || !pw || !name) return alert("모든 항목을 입력해주세요.");
+
+      let users = loadUsers();
+      if (users.find(u => u.id === id)) return alert("이미 존재하는 아이디입니다.");
+
+      users.push({ id, password: pw, nickname: name });
+      saveUsers(users);
+
+      alert("회원가입 완료!");
+      closeModals();
+      showLogin();
+    }
+
+    function login() {
+      const id = document.getElementById('login-id').value.trim();
+      const pw = document.getElementById('login-pw').value.trim();
+
+      // 관리자 로그인 체크
+      if (id === ADMIN_ID && pw === ADMIN_PW) {
+        currentUser = { id: ADMIN_ID, nickname: ADMIN_NICK };
+        isAdmin = true;
+        document.getElementById('user-status').innerHTML = `👑 ${ADMIN_NICK}`;
+        closeModals();
+        alert("관리자 로그인 성공!");
+        return;
+      }
+
+      // 일반 사용자 로그인
+      const users = loadUsers();
+      const user = users.find(u => u.id === id && u.password === pw);
+
+      if (user) {
+        currentUser = user;
+        isAdmin = false;
+        document.getElementById('user-status').innerHTML = `👤 ${user.nickname}`;
+        closeModals();
+        alert("로그인 성공!");
+      } else {
+        alert("아이디 또는 비밀번호가 틀렸습니다.");
       }
     }
 
-    window.onload = checkIP;
+    function attemptPurchase(btn) {
+      if (!currentUser) {
+        alert("로그인이 필요합니다.");
+        showLogin();
+        return;
+      }
+      if (confirm("구매하시겠습니까?")) {
+        alert("✅ 구매 완료!\n관리자와 1:1 채팅이 열렸습니다.");
+        openChat();
+      }
+    }
+
+    function openChat() {
+      document.getElementById('chat-box').style.display = 'block';
+      document.getElementById('chat-title').textContent = isAdmin ? "📢 구매자 관리 채팅" : "관리자와 1:1 채팅";
+    }
+
+    function closeChat() {
+      document.getElementById('chat-box').style.display = 'none';
+    }
+
+    function sendMessage() {
+      const input = document.getElementById('chat-input');
+      const msg = input.value.trim();
+      if (!msg || !currentUser) return;
+
+      const chat = document.getElementById('chat-messages');
+      const isAdminMsg = isAdmin;
+
+      chat.innerHTML += `
+        <div class="message ${isAdminMsg ? 'admin-msg' : 'user-msg'}">
+          <strong>${currentUser.nickname}:</strong> ${msg}
+        </div>`;
+      
+      input.value = "";
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function showHome() {
+      document.getElementById('home-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showChat() {
+      if (!currentUser) return alert("로그인 후 이용 가능합니다.");
+      openChat();
+    }
+
+    // Enter 키로 전송
+    document.getElementById('chat-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') sendMessage();
+    });
   </script>
 </body>
 </html>
