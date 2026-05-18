@@ -1,379 +1,153 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RivalsCheatShop - Roblox Executor</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap');
-
-    :root {
-      --neon: #00ffcc;
-      --bg: #0a0a0f;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body {
-      background: var(--bg);
-      color: #e0e0e0;
-      font-family: 'Roboto Mono', sans-serif;
-    }
-
-    header {
-      background: #111118;
-      border-bottom: 3px solid var(--neon);
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      z-index: 100;
-    }
-
-    .nav {
-      max-width: 1300px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
-
-    .logo {
-      font-family: 'Press Start 2P', sans-serif;
-      font-size: 22px;
-      color: var(--neon);
-    }
-
-    .nav-links a {
-      color: #ddd;
-      margin-left: 25px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(rgba(10,10,15,0.85), rgba(10,10,15,0.95));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-top: 80px;
-    }
-
-    .btn {
-      padding: 18px 45px;
-      font-size: 1.3rem;
-      background: transparent;
-      border: 4px solid var(--neon);
-      color: var(--neon);
-      cursor: pointer;
-      font-family: 'Press Start 2P', sans-serif;
-      margin: 8px;
-    }
-
-    .btn:hover {
-      background: var(--neon);
-      color: #000;
-    }
-
-    .section {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2.4rem;
-      margin-bottom: 50px;
-      color: var(--neon);
-      text-shadow: 0 0 20px var(--neon);
-    }
-
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
-    .product-card {
-      background: #181824;
-      border: 2px solid #333;
-      padding: 25px;
-      position: relative;
-    }
-    .tag {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      padding: 6px 14px;
-      background: #00ff00;
-      color: #000;
-      font-weight: bold;
-    }
-    .price { font-size: 1.9rem; color: var(--neon); margin: 20px 0; }
-
-    .buy-btn {
-      width: 100%;
-      padding: 16px;
-      background: #c026d3;
-      color: white;
-      border: none;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.95);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-content {
-      background: #181824;
-      padding: 40px;
-      border: 4px solid var(--neon);
-      width: 90%;
-      max-width: 420px;
-    }
-
-    /* 채팅창 */
-    #chat-box {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 380px;
-      background: #181824;
-      border: 3px solid var(--neon);
-      z-index: 1500;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .chat-header {
-      background: var(--neon);
-      color: #000;
-      padding: 15px;
-      text-align: center;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    #chat-messages {
-      height: 340px;
-      padding: 15px;
-      overflow-y: auto;
-      background: #0f0f1a;
-    }
-    .message {
-      margin: 8px 0;
-      padding: 8px 12px;
-      border-radius: 6px;
-      max-width: 85%;
-    }
-    .user-msg { background: #1e3a8a; margin-left: auto; }
-    .admin-msg { background: #b91c1c; margin-right: auto; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰토토 | 코윈(Korwin) 2026년 최신 솔직 후기 - 첫충 보너스 최대 5회</title>
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; margin:0; background:#f8f9fa; color:#333; line-height:1.75; }
+        header { background: linear-gradient(135deg, #1a0033, #6a0dad); color:white; padding:30px 0; text-align:center; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 25px; }
+        h1 { font-size: 2.7rem; margin: 35px 0 12px; color:#1a0033; }
+        h2 { color: #4b0082; border-bottom: 3px solid #ff00ff; padding-bottom: 15px; margin-top: 55px; }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff00ff, #c800ff);
+            color: white;
+            font-size: 1.65rem;
+            font-weight: bold;
+            padding: 20px 65px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255,0,255,0.5);
+        }
+        .btn:hover { transform: scale(1.05); }
+        .highlight { color: #ff00ff; font-weight: bold; }
+        .info-box { background: white; padding: 32px; border-radius: 15px; box-shadow: 0 6px 25px rgba(0,0,0,0.1); margin: 40px 0; }
+        ul, ol { font-size: 1.12rem; }
+        footer { background:#1a0033; color:white; text-align:center; padding:45px 20px; margin-top:70px; }
+    </style>
 </head>
 <body>
 
-  <section class="hero" id="home-section">
-    <div>
-      <p>최고의 Roblox Executor &amp; Cheats</p>
-      <button class="btn" onclick="showLogin()">로그인</button>
-      <button class="btn" onclick="showRegister()" style="background:#c026d3; border-color:#c026d3;">회원가입</button>
+<header>
+    <h1 style="margin:0; font-size:2.9rem;">리뷰토토</h1>
+    <p style="margin:10px 0 0; font-size:1.35rem;">국내 최고 토토·카지노 솔직 리뷰 &amp; 안전 놀이터 추천</p>
+</header>
+
+<div class="container">
+
+    <h1>코윈(Korwin) 2026년 최신 후기｜첫충 보너스 최대 5회 + 추천코드 yyk1271</h1>
+    <p><strong>작성일:</strong> 2026년 5월 18일 | <strong>평점:</strong> ★★★★★ 4.97 / 5.0 | <strong>조회수:</strong> 12,847</p>
+
+    <a href="http://win888.korwin5l6.vip/?referralCode=yyk1271" target="_blank" class="btn">
+        🚀 코윈 지금 바로 가입하기 (추천코드 자동 적용)
+    </a>
+
+    <div class="info-box">
+        <h2>🔥 리뷰토토 전용 추천코드</h2>
+        <h3 style="font-size:2.6rem; color:#ff00ff; margin:15px 0;">yyk1271</h3>
+        <p>위 코드로 가입하시면 <span class="highlight">신규회원 첫충 보너스를 총 5회까지</span> 받으실 수 있습니다. 많은 분들이 이 코드로 가입 후 큰 만족을 보이고 계십니다.</p>
     </div>
-  </section>
 
-  <section class="section" id="products-section">
-    <h2>Kicia HOOK CONFIG</h2>
-    <div class="products">
-      <div class="product-card">
-        <div class="tag">BEST</div>
-        <h3>Kicia Hook Config</h3>
-        <p>최신 우회 + 강력한 Hook + Undetected</p>
-        <div class="price">₩ 75,000</div>
-        <button class="buy-btn" onclick="attemptPurchase(this)">구매하기</button>
-      </div>
+    <h2>코윈(Korwin)이 어떤 곳인가?</h2>
+    <p>코윈은 2025년부터 빠르게 성장하고 있는 프리미엄 온라인 카지노·토토 플랫폼입니다. 단순한 게임 사이트가 아닌, <strong>안전성·혜택·게임 다양성</strong>을 모두 갖춘 곳으로 평가받고 있습니다.</p>
+    <p>특히 리뷰토토를 통해 들어오시는 신규 회원분들은 첫 입금부터 최대 5회까지 특별 보너스를 받을 수 있어 초기 자본을 크게 불릴 수 있는 기회가 됩니다. 슬롯, 라이브 카지노, 스포츠토토, 미니게임까지 한 번에 즐길 수 있어 요즘 가장 핫한 사이트 중 하나입니다.</p>
 
-      <div class="product-card">
-        <div class="tag">POPULAR</div>
-        <h3>Custom Script</h3>
-        <p>이름없는 향상자와 똑같은 스크립트를 만들고 싶으신가요?</p>
-        <div class="price">₩ 85,000</div>
-        <button class="buy-btn" onclick="attemptPurchase(this)">구매하기</button>
-      </div>
+    <h2>코윈 첫충 보너스 상세 안내 (최대 5회)</h2>
+    <div class="info-box">
+        <p>코윈의 가장 큰 장점은 바로 <span class="highlight">첫충 보너스 총 5회 제공</span>입니다.</p>
+        <ul>
+            <li><strong>1회차</strong> : 최대 300% 입금 보너스 (가장 높은 비율)</li>
+            <li><strong>2~5회차</strong> : 추가 충전 시마다 고정 퍼센트 보너스 지급</li>
+            <li>모든 보너스는 입금 즉시 자동 지급</li>
+            <li>리뷰토토 추천코드 <strong>yyk1271</strong> 입력 필수</li>
+        </ul>
+        <p>실제 많은 회원님들이 첫 5회 충전을 통해 초기 자금을 3~4배 이상 불리고 시작하셨습니다.</p>
     </div>
-  </section>
 
-  <!-- 로그인 모달 -->
-  <div id="login-modal" class="modal">
-    <div class="modal-content">
-      <h2>로그인</h2>
-      <input type="text" id="login-id" placeholder="아이디" style="width:100%; padding:15px; margin:10px 0;">
-      <input type="password" id="login-pw" placeholder="비밀번호" style="width:100%; padding:15px; margin:10px 0;">
-      <button onclick="login()" style="width:100%; padding:18px; background:var(--neon); color:#000; margin-top:10px;">로그인</button>
-      <button onclick="closeModals()" style="width:100%; padding:15px; margin-top:10px;">취소</button>
+    <h2>코윈의 주요 장점 TOP 7</h2>
+    <div class="info-box">
+        <ol>
+            <li><strong>풍부한 첫충 혜택</strong> – 최대 5회까지 적용</li>
+            <li><strong>게임 라인업</strong> – 수천 종의 최신 슬롯 + 에볼루션, 프라그마틱 등 프리미엄 라이브 카지노</li>
+            <li><strong>스포츠 토토</strong> – 국내외 주요 경기 실시간 배팅 가능</li>
+            <li><strong>입출금 속도</strong> – 최소 입금 1만원, 평균 출금 5~15분</li>
+            <li><strong>모바일 최적화</strong> – PC 없이도 언제 어디서나 쾌적한 플레이</li>
+            <li><strong>이벤트 풍부</strong> – 매일 출석체크, 주간 미션, 롤링/루징 보너스</li>
+            <li><strong>친절한 고객센터</strong> – 24시간 한국어 지원</li>
+        </ol>
     </div>
-  </div>
 
-  <!-- 회원가입 모달 -->
-  <div id="register-modal" class="modal">
-    <div class="modal-content">
-      <h2>회원가입</h2>
-      <input type="text" id="reg-id" placeholder="아이디" style="width:100%; padding:15px; margin:10px 0;">
-      <input type="password" id="reg-pw" placeholder="비밀번호" style="width:100%; padding:15px; margin:10px 0;">
-      <input type="text" id="reg-name" placeholder="닉네임" style="width:100%; padding:15px; margin:10px 0;">
-      <button onclick="register()" style="width:100%; padding:18px; background:#c026d3; color:white; margin-top:10px;">회원가입</button>
-      <button onclick="closeModals()" style="width:100%; padding:15px; margin-top:10px;">취소</button>
+    <h2>실제 이용자 생생 후기</h2>
+    
+    <div class="info-box">
+        <p>“yyk1271 코드로 가입했는데 첫충 5번 다 받아서 시작 자금이 정말 많이 늘었어요. 슬롯도 잘 터지고 출금도 빠르게 해줘서 지금까지 계속 이용 중입니다. 강추!”</p>
+        <p style="text-align:right; color:#555;">— 회원 김○○님 (2026년 4월 가입)</p>
     </div>
-  </div>
 
-  <!-- 1:1 채팅 -->
-  <div id="chat-box">
-    <div class="chat-header">
-      <span id="chat-title">관리자와 1:1 채팅</span>
-      <span onclick="closeChat()" style="cursor:pointer; font-size:18px;">✕</span>
+    <div class="info-box">
+        <p>“다른 사이트에서 옮겼는데 코윈이 훨씬 낫네요. 첫충 보너스 5회 적용받고 매일 이벤트도 참여하고 있어요. 고객센터 상담원도 친절하고 응답도 빠릅니다.”</p>
+        <p style="text-align:right; color:#555;">— 회원 이○○님</p>
     </div>
-    <div id="chat-messages"></div>
-    <input type="text" id="chat-input" placeholder="메시지를 입력하세요..." 
-           style="width:100%; padding:15px;" onkeypress="if(event.key==='Enter') sendMessage()">
-  </div>
 
-  <footer style="text-align:center; padding:40px; color:#666;">
-    © 2026 RivalsCheatShop
-  </footer>
+    <div class="info-box">
+        <p>“초보자라 걱정했는데 가입부터 첫충까지 설명도 잘 되어있고, 추천코드 넣으니 바로 혜택 적용됐어요. 지금까지 불만 없이 잘 이용하고 있습니다.”</p>
+        <p style="text-align:right; color:#555;">— 회원 박○○님 (5월 가입)</p>
+    </div>
 
-  <script>
-    let currentUser = null;
-    let isAdmin = false;
+    <h2>코윈 가입부터 첫충까지 5단계 가이드</h2>
+    <ol>
+        <li>아래 전용 링크 클릭하여 코윈 공식 사이트 접속</li>
+        <li>상단 회원가입 버튼 클릭 후 정보 입력</li>
+        <li><strong>추천코드 입력란에 yyk1271</strong> 정확히 기입</li>
+        <li>원하는 금액으로 입금 (1만원 이상 권장)</li>
+        <li>입금과 동시에 보너스 자동 지급 → 게임 플레이 시작!</li>
+    </ol>
 
-    const ADMIN_ID = "aa789";
-    const ADMIN_PW = "khs10937";
-    const ADMIN_NICK = "관리자";
+    <a href="http://win888.korwin5l6.vip/?referralCode=yyk1271" target="_blank" class="btn">
+        🎰 지금 바로 코윈 가입하고 첫충 5회 혜택 받기
+    </a>
 
-    function loadUsers() {
-      const users = localStorage.getItem('rivalsUsers');
-      return users ? JSON.parse(users) : [];
-    }
+    <h2>다른 사이트와 비교</h2>
+    <div class="info-box">
+        <p>많은 분들이 코윈으로 갈아타는 이유는 명확합니다. 다른 사이트들은 첫충 1~2회만 주거나 조건이 까다로운 반면, 코윈은 <strong>최대 5회</strong>까지 넉넉하게 지원해주고 롤링 조건도 합리적입니다. 출금 속도와 고객 응대에서도 상위권에 속합니다.</p>
+    </div>
 
-    function saveUsers(users) {
-      localStorage.setItem('rivalsUsers', JSON.stringify(users));
-    }
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="info-box">
+        <p><strong>Q. 첫충 보너스는 언제까지 받을 수 있나요?</strong><br>
+        A. 신규 가입 후 첫 5회 입금까지 적용됩니다. 가입 후 빠르게 진행하시는 걸 추천드려요.</p>
+        
+        <p><strong>Q. 추천코드 yyk1271을 안 넣으면 어떻게 되나요?</strong><br>
+        A. 혜택이 제한될 수 있으니 반드시 입력해주세요. 나중에 수정이 어렵습니다.</p>
+        
+        <p><strong>Q. 출금 조건은 어렵지 않나요?</strong><br>
+        A. 다른 사이트 대비 조건이 상당히 합리적이라는 평가가 많습니다.</p>
+        
+        <p><strong>Q. 모바일로도 잘 되나요?</strong><br>
+        A. 완벽하게 최적화되어 있어 PC보다 모바일로 이용하는 회원이 더 많습니다.</p>
+    </div>
 
-    function showLogin() {
-      document.getElementById('login-modal').style.display = 'flex';
-    }
+    <a href="http://win888.korwin5l6.vip/?referralCode=yyk1271" target="_blank" class="btn">
+        🚀 리뷰토토 독점 링크 - 코윈 지금 접속하기
+    </a>
 
-    function showRegister() {
-      document.getElementById('register-modal').style.display = 'flex';
-    }
+    <div class="info-box">
+        <h2>주의사항</h2>
+        <p>※ 본 사이트는 19세 이상 성인 전용입니다.<br>
+        ※ 도박은 중독성이 있을 수 있으니 본인의 소득 범위 내에서 건전하게 즐겨주세요.<br>
+        ※ 모든 도박의 책임은 이용자 본인에게 있습니다.<br>
+        ※ 해당 페이지는 코윈 홍보를 목적으로 작성되었습니다.</p>
+    </div>
 
-    function closeModals() {
-      document.getElementById('login-modal').style.display = 'none';
-      document.getElementById('register-modal').style.display = 'none';
-    }
+</div>
 
-    function register() {
-      const id = document.getElementById('reg-id').value.trim();
-      const pw = document.getElementById('reg-pw').value.trim();
-      const name = document.getElementById('reg-name').value.trim();
+<footer>
+    <p><strong>리뷰토토</strong> — 안전하고 솔직한 리뷰만 제공합니다</p>
+    <p>Copyright © 2026 리뷰토토. All Rights Reserved.</p>
+</footer>
 
-      if (!id || !pw || !name) return alert("모든 항목을 입력해주세요.");
-
-      let users = loadUsers();
-      if (users.find(u => u.id === id)) return alert("이미 존재하는 아이디입니다.");
-
-      users.push({ id, password: pw, nickname: name });
-      saveUsers(users);
-
-      alert("회원가입 완료!");
-      closeModals();
-      showLogin();
-    }
-
-    function login() {
-      const id = document.getElementById('login-id').value.trim();
-      const pw = document.getElementById('login-pw').value.trim();
-
-      // 관리자 로그인 체크
-      if (id === ADMIN_ID && pw === ADMIN_PW) {
-        currentUser = { id: ADMIN_ID, nickname: ADMIN_NICK };
-        isAdmin = true;
-        document.getElementById('user-status').innerHTML = `👑 ${ADMIN_NICK}`;
-        closeModals();
-        alert("관리자 로그인 성공!");
-        return;
-      }
-
-      // 일반 사용자 로그인
-      const users = loadUsers();
-      const user = users.find(u => u.id === id && u.password === pw);
-
-      if (user) {
-        currentUser = user;
-        isAdmin = false;
-        document.getElementById('user-status').innerHTML = `👤 ${user.nickname}`;
-        closeModals();
-        alert("로그인 성공!");
-      } else {
-        alert("아이디 또는 비밀번호가 틀렸습니다.");
-      }
-    }
-
-    function attemptPurchase(btn) {
-      if (!currentUser) {
-        alert("로그인이 필요합니다.");
-        showLogin();
-        return;
-      }
-      if (confirm("구매하시겠습니까?")) {
-        alert("✅ 구매 완료!\n관리자와 1:1 채팅이 열렸습니다.");
-        openChat();
-      }
-    }
-
-    function openChat() {
-      document.getElementById('chat-box').style.display = 'block';
-      document.getElementById('chat-title').textContent = isAdmin ? "📢 구매자 관리 채팅" : "관리자와 1:1 채팅";
-    }
-
-    function closeChat() {
-      document.getElementById('chat-box').style.display = 'none';
-    }
-
-    function sendMessage() {
-      const input = document.getElementById('chat-input');
-      const msg = input.value.trim();
-      if (!msg || !currentUser) return;
-
-      const chat = document.getElementById('chat-messages');
-      const isAdminMsg = isAdmin;
-
-      chat.innerHTML += `
-        <div class="message ${isAdminMsg ? 'admin-msg' : 'user-msg'}">
-          <strong>${currentUser.nickname}:</strong> ${msg}
-        </div>`;
-      
-      input.value = "";
-      chat.scrollTop = chat.scrollHeight;
-    }
-
-    function showHome() {
-      document.getElementById('home-section').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function showChat() {
-      if (!currentUser) return alert("로그인 후 이용 가능합니다.");
-      openChat();
-    }
-
-    // Enter 키로 전송
-    document.getElementById('chat-input').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') sendMessage();
-    });
-  </script>
 </body>
 </html>
